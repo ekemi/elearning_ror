@@ -1,0 +1,13 @@
+<h1>Sing Up </h1>
+
+<%= form_for (@student) do |f|%>
+<%= f.label :username%>
+<%=f.text_field :username%>
+
+<%= f.label :email%>
+<%=f.email_field :email%>
+
+<%= f.label :password%>
+<%=f.password_field :password%>
+<%= f.submit "Submit"%>
+    <%end%>
