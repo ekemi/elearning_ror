@@ -8,6 +8,6 @@ validates :location, :roomNumber , :startDate,:endDate,
 scope :beta , ->{order('LOWER(topic)')}
 
 def self.search(q)
-Course.WHERE("topic LIKE ?","%#{q}%").beta
+Course.where("topic LIKE ?","%#{q}%").beta
 end
 end

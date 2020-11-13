@@ -1,1 +1,11 @@
 
+<h1>Welcome, <%= @student.username %>!</h1>
+<h4>Let's get cooking! Add a new recipe or view all recipes.</h4>
+<br>
+<%= button_to "Courses", courses_path, method: 'get' %>
+<br>
+<%= button_to 'Add a Course', new_course_path %>
+<br>
+
+
+image_tag calum-lewis-vA1L1jRTM70-unsplash.jpg

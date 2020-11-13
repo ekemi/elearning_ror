@@ -1,0 +1,14 @@
+<br>
+<h4> Your Review</h4>
+<br>
+<div>
+<h4><%=@review.student.username%><h4>
+<ul>
+<li>Rating: <%=@review.rating%></li>
+<li>Comment: <%=@review.comments%></li>
+</ul>
+</div>
+
+<%if @review.student == current_student%>
+ <%= link_to ":Edit Review", edit_review_path(@review)%>
+ <% end%>

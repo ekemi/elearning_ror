@@ -1,0 +1,15 @@
+<h4> Leave a review for  <%=@course.prosesorName%> <span>'s</span><%=@review.course.topic%> course.</h4>
+<%= form_for(@review) do |f| %>
+    <%= f.hidden_field :course_id, :value => @course.id %>
+    
+    <%= f.label :rating, "Rating" %>
+    <%= f.text_field :rating, placeholder: "Tell us why you love it!" %>
+    <br>
+    <br>
+    <%= f.label :comments, "Comments" %>
+    <%= f.text_field :comments, placeholder: "Tell us why you love it!" %>
+    <br>
+    <br>
+    <%= f.submit "Submit" %>
+
+<% end %>

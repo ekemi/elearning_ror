@@ -1,0 +1,19 @@
+<h2>Edit your review</h2>
+
+<%=form_for(@review) do |f| %> 
+     
+    <%= f.label :rating, "Rating: " %>
+    <%= f.text_field :rating, placeholder: "Update your comment" %>
+    <br>
+    <br>
+
+    <%= f.label :comments, "Comments: " %>
+    <%= f.text_field :comments, placeholder: "Update your comment" %>
+    <br>
+    <br>
+    <%= f.submit "Submit" %>
+<% end %>
+
+<p class="button"><%= button_to 'Delete Review', review_path(@review), method: 'delete' %></p>
+
+<p><%= button_to 'Return to the homepage', root_path, method: 'get' %></p>
