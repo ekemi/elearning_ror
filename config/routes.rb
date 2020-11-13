@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   resources :courses
   root 'sessions#home'
   get '/signup' => "students#new"

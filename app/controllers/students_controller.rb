@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
         else
             @students = Student.beta.all
         end
-    end
+    
 
     end
     
