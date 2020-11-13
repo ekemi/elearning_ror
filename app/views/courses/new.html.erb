@@ -1,0 +1,43 @@
+<div class = "jumbotron">
+
+<br>
+<h1> Add a new Course </h1>
+</br>
+</div>
+</br>
+<%= flash[:error] if flash[:error]%>
+<%= form_for (@course) do |f| %>
+   
+    <%= f.label :topic%>
+    <%= f.text_field :topic%>
+    <br>
+
+    <%= f.label :location%>
+    <%= f.text_field :location%>
+    <br>
+
+    <%= f.label :roomNumber%>
+    <%= f.number_field :roomNumber%>
+    <br>
+    <%= f.label :prosesorName%>
+    <%= f.text_field :prosesorName%>
+    <br>
+
+    <%= f.label :startDate%>
+    <%= f.text_field :startDate%>
+    <br>
+    <%= f.label :endDate%>
+    <%= f.text_field :endDate%>
+    <br>
+    <%= f.label :beginningDate%>
+    <%= f.text_field :beginningDate%>
+    <br>
+
+    <%= f.label :endingDate%>
+    <%= f.text_field :endingDate%>
+    <br>
+    <%= f.label :requirement%>
+    <%= f.text_field :requirement%>
+    <br>
+    <%= f.submit 'Add a Course'%>
+    <%end%>

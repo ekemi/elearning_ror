@@ -1,18 +1,5 @@
 class StudentsController < ApplicationController
     
-    before_action :redirect_if_not_logged_in
-
-
-    def index
-        if params[:q]
-            @students = Student.search(params[:q])
-        else
-            @students = Student.beta.all
-        end
-    
-
-    end
-    
     
     
     # sign up form

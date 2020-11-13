@@ -1,1 +1,28 @@
-All courses
+<%=@course.student.username.capitalize%> 
+<span>'s </span><%=@course.topic%> <span> with profesor: <%=@course.prosesorName.capitalize%> <span>
+
+<div>
+<h4> Location: <%=@course.location%></h4>
+<h4> Room:<%=@course.roomNumber%></h4>
+<h4>Starting Date : <%=@course.startDate%></h4>
+<h4> Ending Date  :<%=@course.endDate%></h4>
+<h4> Sartine Time :<%=@course.beginningDate%></h4>
+<h4> Ending Time: <%=@course.beginningDate%></h4>
+<h4> Requirements : <%=@course.requirement%></h4>
+</div>
+<%= link_to "Add a Review on the Profesor", new_course_review_path(@course)%>
+<br><br>
+<h4><strong>Reviews: </strong></h4>
+<%@course.reviews.each do |review|%>
+    <div>
+    <ul>
+    
+    <li><strong><%=review.student.username%>: </li>
+    <div>  
+     <p> Ratings: <%=review.rating%></p>
+      <p> Comment: <%=review.comments%></p>
+    </div>
+    </ul>
+    </div>
+    <%end%>
+
