@@ -1,1 +1,19 @@
-<h1>Home</h1>
+<% if logged_in? %>
+
+<h4> Welcome!</h4>
+<br>
+<h4> Learn for all! Add a new Course or view all Courses.</h4>
+<br>
+<%= button_to "Courses",courses_path, method: 'get'%>
+<br>
+<%= button_to "Add course",new_course_path, method: 'get'%>
+<br>
+<% else %>
+
+<%=button_to "Login",login_path, method: 'get'%>
+<br>
+<%= button_to "Sign Up",signup_path, method: 'get'%>
+<% end %>
+image
+ 
+
