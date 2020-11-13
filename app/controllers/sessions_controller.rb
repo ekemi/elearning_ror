@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     def home
+        @student = Student.find_by_id(params[:id])
     end
     def new
         @student = Student.new
