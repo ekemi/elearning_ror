@@ -4,7 +4,7 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.string :topic
       t.string :location
       t.integer :roomNumber
-      t.string :prosesorName
+      t.string :profesorName
       t.string :startDate
       t.string :endDate
       t.string :beginningDate
