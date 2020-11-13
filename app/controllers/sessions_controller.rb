@@ -3,10 +3,12 @@ class SessionsController < ApplicationController
     def home
         @student = Student.find_by_id(params[:id])
     end
-    def new
-        @student = Student.new
-        render :login
+    # def new
+        # @student = Student.new
+        # render :login
        
+    # end
+    def google
     end
 
     def create
