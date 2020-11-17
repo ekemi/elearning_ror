@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
     def home
+        
         @student = Student.find_by_id(params[:id])
     end
     # def new
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
     end
 
     def create
+       
         @student = Student.find_by(username: params[:student][:username])
         if @student && @student.authenticate(params[:student][:password])
             session[:student_id] = @student.id

@@ -10,6 +10,24 @@
   </head>
 
   <body>
+  <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+
+  <div class="jumbotron">
+        <br><br><br>
+       
+        <br>
+  </div>
+
+    <div>
+      <% if flash[:message] %>
+        <%= flash[:message] %>
+      <% end %>
+      <%= @error %>
+    </div>
+
+    
     <%= yield %>
   </body>
 </html>

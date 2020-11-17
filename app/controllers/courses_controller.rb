@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
 before_action :redirect_if_not_logged_in
 
     def index
+    
         if params[:q]
             @courses = Course.search(params[:q])
         else
@@ -15,7 +16,7 @@ before_action :redirect_if_not_logged_in
 
     def create 
         #binding.byebug
-        @course = current_student.courses.build(course_params)
+    @course = current_student.courses.build(course_params)
     if @course.save
         #redirect them to show 
         redirect_to course_path(@course) #"/course/:id"

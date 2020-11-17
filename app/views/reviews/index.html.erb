@@ -1,4 +1,5 @@
 <h4> Your Reviews</h4>
+<%=flash[:success]%>
 <ul>
 <%@reviews.each do |review| %>
   <li>  <%=review.rating%></li>
